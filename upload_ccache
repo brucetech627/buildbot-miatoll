@@ -11,13 +11,12 @@ com ()
 }
 
 time com rom 1 # Compression level 1, its enough
+#"rom" is the name of your rom
 
 up(){
 	curl bashupload.com -T $1
 }
 
 up rom.tar.gz
+#"rom" is the name of your rom
 
-# mkdir -p ~/.config/rclone
-# echo "$rclone_config" > ~/.config/rclone/rclone.conf # Write rclone config found from env variable, so that cloud storage can be used to upload ccache
-# time rclone copy ccache2.tar.gz gdrive:/ccache/ -P # apon is my rclone config name, ccache/ci2 is where ccache will be saved in my cloud, use yours one
