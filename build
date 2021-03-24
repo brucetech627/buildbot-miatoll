@@ -3,8 +3,8 @@ cd /tmp/rom # Depends on where source got synced
 rm -rf .repo & # lets remove unnecessary things, so that no storage issue can occur
 
 # Normal build steps
-. build/envsetup.sh
-lunch lighthouse_miatoll-userdebug
+source build/envsetup.sh
+lunch rom_miatoll-userdebug # edit this to your device stuff
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
@@ -17,18 +17,18 @@ up(){
 }
 
 make_metalava(){
-	mka api-stubs-docs -j26
-	mka system-api-stubs-docs -j26
-	mka test-api-stubs-docs -j26
+	mka api-stubs-docs
+	mka system-api-stubs-docs
+	mka test-api-stubs-docs
 }
 
 make_rom(){
-	make bacon -j26
-	zip=$(up out/target/product/miatoll/*zip)
+	make bacon -j16
+	zip=$(up out/target/product/miatoll/*zip) #make sure to edit miatoll---> your gay device
 	echo " "
 	echo "$zip"
 }
 
 make_metalava
-make_rom
-sudo apt install tmate && ssh-keygen && tmate
+make_rom &
+sleep 4500 && kill "$!"
