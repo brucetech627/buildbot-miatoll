@@ -12,7 +12,10 @@ git config --global user.name "Box In A Box"
 git config --global user.email evanferrao@gmail.com
 
 # Sync source with -q, no need unnecessary messages, you can remove -q if want! try with -j30 first, if fails, it will try again with -j8
-repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j16
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all) || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
+cd /tmp/rom
+pwd
+ls
 
 git clone https://github.com/ArrowOS-Devices/android_device_xiaomi_miatoll.git -b arrow-11.0 device/xiaomi/miatoll
 git clone https://github.com/ArrowOS-Devices/android_device_xiaomi_sm6250-common.git -b arrow-11.0 device/xiaomi/sm6250-common
