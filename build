@@ -3,7 +3,7 @@ cd /tmp/rom # Depends on where source got synced
 rm -rf .repo & # lets remove unnecessary things, so that no storage issue can occur
 
 # Normal build steps
-. build/envsetup.sh 
+. build/envsetup.sh
 lunch nad_violet-userdebug
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
