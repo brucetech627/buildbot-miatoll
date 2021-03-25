@@ -14,7 +14,7 @@ git config --global user.email jashvakharia@gmail.com
 # Sync source with -q, no need unnecessary messages, you can remove -q if want! try with -j30 first, if fails, it will try again with -j8
 repo sync
 
-git clone https://github.com/brucetech627/device_xiaomi_violet.git
+git clone https://github.com/brucetech627/device_xiaomi_violet.git device/xiaomi/violet
 git clone --depth=1 --single-branch https://github.com/NusantaraROM-Devices/vendor_xiaomi_violet.git -b 11 vendor/xiaomi/violet
 git clone --depth=1 --single-branch https://github.com/NusantaraROM-Devices/android_kernel_xiaomi_violet.git kernel/xiaomi/violet --depth=1
 
