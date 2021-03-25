@@ -4,7 +4,7 @@ rm -rf .repo & # lets remove unnecessary things, so that no storage issue can oc
 
 # Normal build steps
 . build/envsetup.sh
-lunch crdroid_miatoll-userdebug
+lunch crdroid_violet-eng
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
@@ -24,7 +24,7 @@ make_metalava(){
 
 make_rom(){
 	make bacon -j26
-	zip=$(up out/target/product/miatoll/*zip)
+	zip=$(up out/target/product/violet/*zip)
 	echo " "
 	echo "$zip"
 }
