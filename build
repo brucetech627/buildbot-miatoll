@@ -23,7 +23,7 @@ make_metalava(){
 }
 
 make_rom(){
-	brunch lineage_violet-eng # Make command
+	brunch lineage_violet-eng -j26 # Make command
 	zip=$(up out/target/product/violet/*zip)
 	echo " "
 	echo "$zip"
