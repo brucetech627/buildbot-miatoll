@@ -23,7 +23,7 @@ make_metalava(){
 }
 
 make_rom(){
-	mka nad -j20
+	mka nad -j20 # build
 	zip=$(up out/target/product/violet/*zip)
 	echo " "
 	echo "$zip"
