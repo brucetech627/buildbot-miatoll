@@ -23,7 +23,7 @@ make_metalava(){
 }
 
 make_rom(){
-	bmake bacon -j26 # Make command
+	make bacon -j26 # Make command
 	zip=$(up out/target/product/violet/*zip)
 	echo " "
 	echo "$zip"
