@@ -4,7 +4,7 @@ rm -rf .repo & # lets remove unnecessary things, so that no storage issue can oc
 
 # Normal build steps
 . build/envsetup.sh
-lunch lineage_violet-eng
+lunch lineage_violet-userdebug
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
@@ -23,7 +23,7 @@ make_metalava(){
 }
 
 make_rom(){
-	brunch lineage_violet-eng -j26 # Make command
+	brunch lineage_violet-userdebug -j16 # Make command
 	zip=$(up out/target/product/violet/*zip)
 	echo " "
 	echo "$zip"
