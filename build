@@ -5,6 +5,7 @@ rm -rf .repo & # lets remove unnecessary things, so that no storage issue can oc
 # Normal build steps
 . build/envsetup.sh
 lunch nad_violet-userdebug
+export USE_GAPPS=true
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
