@@ -18,6 +18,6 @@ pwd
 ls
 
 #delete files below and sync your own sauces
-git clone --depth=1 --single-branch https://github.com/brucetech627/device_xiaomi_violet.git -b r11.0
+git clone --depth=1 --single-branch https://github.com/brucetech627/device_xiaomi_violet.git -b r11.0 device/xiaomi/violet
 git clone --depth=1 --single-branch https://github.com/NusantaraROM-Devices/vendor_xiaomi_violet.git -b 11 vendor/xiaomi/violet
 git clone --depth=1 --single-branch https://github.com/NusantaraROM-Devices/android_kernel_xiaomi_violet.git kernel/xiaomi/violet --depth=1
