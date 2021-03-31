@@ -25,7 +25,7 @@ make_metalava(){
 
 make_rom(){
 	mka nad
-	zip=$(up out/target/product/violet/N*zip)
+	zip=$(up out/target/product/violet/Nu*zip)
 	echo " "
 	echo "$zip"
 }
